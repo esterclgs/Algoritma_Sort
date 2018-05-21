@@ -4,3 +4,7 @@ using namespace std;
 
 //Untuk mengkompile salah satu algoritma sort, maka dua algoritma sort yang lain harus dijadikan sebagai komentar terlebih dahulu.
 
+//Algoritma Selection Sort
+void selection_sort(int[100], int);
+
+int main () {
