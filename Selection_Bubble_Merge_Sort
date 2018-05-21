@@ -69,5 +69,5 @@ void bubble_sort(long list[100], long n) {
 		list[d+1]=t;
            }
 	}
-    }
+   }
 } 
