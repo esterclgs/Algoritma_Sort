@@ -45,6 +45,8 @@ void bubble_sort(long [100], long);
 
 int main () {
 	long array[100], n, c, d, swap;
+	cout<<"Masukkan jumlah elemen = "; cin>>n;
+	cout<<"\nMasukkan "<<n<<" bilangan = \n";
 	
 
 
