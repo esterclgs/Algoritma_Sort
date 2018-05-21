@@ -37,3 +37,6 @@ void selection_sort(int A[100], int n) {
 	temp=A[imin];
 	A[imin]=A[i];
 	A[i]=temp;
+	}
+	}
+}
