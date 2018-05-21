@@ -53,5 +53,8 @@ int main () {
 	bubble_sort(array,n);
 	cout<<"\nPengurutan dari nilai terkecil : \n";
 	for (c=0;c<n;c++) {
-
+	cout<<array[c]<<" ";
+	}
+	return 0;
+}
 
