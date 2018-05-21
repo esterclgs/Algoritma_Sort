@@ -20,3 +20,6 @@ int main () {
 	cout<<"\nPengurutan dari nilai terkecil : \n";
 	for (i=1;i<=n;i++) {
 		cout<<A[i]<<"\n";
+	}
+	return 0;
+}
