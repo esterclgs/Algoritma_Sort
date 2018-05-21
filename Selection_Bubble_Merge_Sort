@@ -47,6 +47,8 @@ int main () {
 	long array[100], n, c, d, swap;
 	cout<<"Masukkan jumlah elemen = "; cin>>n;
 	cout<<"\nMasukkan "<<n<<" bilangan = \n";
-	
+	for (c=0;c<n;c++) {
+		cin>>array[c];
+	}
 
 
