@@ -58,3 +58,6 @@ int main () {
 	return 0;
 }
 
+    void bubble_sort(long list[100], long n) {
+	long c, d, t;
+
