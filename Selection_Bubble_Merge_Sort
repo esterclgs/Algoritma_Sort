@@ -39,3 +39,5 @@ void selection_sort(int A[100], int n) {
 	}
 	}
 }
+
+//Algoritma Bubble Sort
