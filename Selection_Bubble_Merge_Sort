@@ -31,3 +31,6 @@ void selection_sort(int A[100], int n) {
 		//cari indeks dari elemen minimum di dalam A[i]
 		imin=i;
 		for (j=i+1;j<=n;j++){
+	if (A[j]<A[imin])
+			imin=j;
+	//pertukaran L[imin] dengan L[i]
