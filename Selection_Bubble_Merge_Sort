@@ -26,3 +26,8 @@ int main () {
 
 void selection_sort(int A[100], int n) {
 	int i,j,imin,temp;
+
+		for (i=1; i<=n-1;i++) {
+		//cari indeks dari elemen minimum di dalam A[i]
+		imin=i;
+		for (j=i+1;j<=n;j++){
