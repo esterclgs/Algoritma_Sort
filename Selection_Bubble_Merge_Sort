@@ -34,3 +34,6 @@ void selection_sort(int A[100], int n) {
 	if (A[j]<A[imin])
 			imin=j;
 	//pertukaran L[imin] dengan L[i]
+	temp=A[imin];
+	A[imin]=A[i];
+	A[i]=temp;
