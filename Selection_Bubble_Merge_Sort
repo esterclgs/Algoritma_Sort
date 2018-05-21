@@ -8,3 +8,6 @@ using namespace std;
 void selection_sort(int[100], int);
 
 int main () {
+  int A[100], n,i;
+	
+	cout<<"Masukkan jumlah elemen = "; cin>>n;
