@@ -23,3 +23,6 @@ int main () {
 	}
 	return 0;
 }
+
+void selection_sort(int A[100], int n) {
+	int i,j,imin,temp;
