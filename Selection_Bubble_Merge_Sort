@@ -67,3 +67,7 @@ int main () {
 		t=list[d];
 		list[d]=list[d+1];
 		list[d+1]=t;
+           }
+	}
+    }
+} 
