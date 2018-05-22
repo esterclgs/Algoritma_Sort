@@ -10,3 +10,10 @@ Implementasi Sorting Algoritma
 #include <iostream>
 using namespace std;
 int dt1[100],dt2[100], ndata;
+void SelectionSort(){
+	int min;
+	for(int i=1;i<=ndata;i++){
+		min = i;
+		for(int j = i+1;j<=ndata;j++){
+			if(dt1[j] < dt1[min]) min = j;
+		}
