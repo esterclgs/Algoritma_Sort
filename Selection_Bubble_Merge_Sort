@@ -10,6 +10,7 @@ Implementasi Sorting Algoritma
 #include <iostream>
 using namespace std;
 int dt1[100],dt2[100], ndata;
+
 void SelectionSort(){
 	int min;
 	for(int i=1;i<=ndata;i++){
@@ -17,3 +18,90 @@ void SelectionSort(){
 		for(int j = i+1;j<=ndata;j++){
 			if(dt1[j] < dt1[min]) min = j;
 		}
+		if(min != i) {
+			int temp;
+			temp = dt1[i];
+			dt1[i] = dt1[min];
+			dt1[min] = temp;
+		}
+	}
+}
+void BubbleSort() {
+	int b;
+	for(int i=0;i<ndata;i++){
+		for(int j=0;j<ndata;j++){
+			if(dt1[j]>dt1[j+1])  {
+				b=dt1[j];
+				dt1[j]=dt1[j+1];
+				dt1[j+1]=b;
+			}
+		}
+	}
+}
+void merge(int kiri,int tengah,int kanan);
+void MergeSort(int awal,int akhir){
+	int tengah;
+	if(awal<akhir){
+	tengah=(awal+akhir)/2;
+	MergeSort(awal,tengah);
+	MergeSort(tengah+1,akhir);
+	merge(awal,tengah,akhir);
+	}
+}
+void merge(int kiri,int tengah,int kanan){
+	int h,i,j,k;
+	h=kiri;
+	i=kiri;
+	j=tengah+1;
+	while((h<=tengah)&&(j<=kanan)){
+		if(dt1[h]<=dt1[j]){
+			dt2[i]=dt1[h]; h++;
+		}
+		else{
+			dt2[i]=dt1[j]; j++;
+		} i++;
+	}
+	
+	if(h>tengah){
+		for(k=j;k<=kanan;k++){
+			dt2[i]=dt1[k]; i++;
+		}
+	}
+	else{
+		for(k=h;k<=tengah;k++){
+			dt2[i]=dt1[k]; i++;
+		}
+	}
+	for(k=kiri;k<=kanan;k++)
+		dt1[k]=dt2[k];
+}
+int main(){
+	int pil;
+	cout<<"Program Sorting, pilih Jenis Sorting :"<<endl;
+	cout<<"1. Selection Sort"<<endl;
+	cout<<"2. Buble Sort"<<endl;
+	cout<<"3. Merge Sort"<<endl;
+	cout<<"Masukkan Pilihan : ";cin>>pil;
+	cout<<"Masukkan Banyak Data : ";
+	cin>>ndata;
+	for(int i=1;i<=ndata;i++){
+		cout<<"Masukkan data ke "<<i<<" : ";
+		cin>>dt1[i];
+		dt2[i]=dt1[i];
+	}
+	switch(pil){
+		case 1 : SelectionSort();
+			break;
+		case 2 : BubbleSort();
+			break;
+		case 3 : MergeSort(1,ndata);
+			break;
+		default : cout<<"Pilihan Salah"<<endl;
+			break;
+		}
+	cout<<"Data Setelah di Urutkan : ";
+	for(int i=1; i<=ndata; i++){
+		cout<<" "<<dt1[i];
+	}
+	cout<<"\nSorting Selesai";
+}
