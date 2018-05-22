@@ -40,16 +40,33 @@ void selection_sort(int A[100], int n) {
 	}
 }
 
+//Algoritma Bubble Sort
+void bubble_sort(long [100], long);
+
+int main () {
+	long array[100], n, c, d, swap;
+	cout<<"Masukkan jumlah elemen = "; cin>>n;
+	cout<<"\nMasukkan "<<n<<" bilangan = \n";
+	for (c=0;c<n;c++) {
+		cin>>array[c];
+	}
+	bubble_sort(array,n);
+	cout<<"\nPengurutan dari nilai terkecil : \n";
+	for (c=0;c<n;c++) {
+	cout<<array[c]<<" ";
+	}
+	return 0;
+}
+
 void BubbleSort() {
-	int a,b;
-	for(int i=0;i<ndata-1;i++){
-		for(int j=i+1;j<ndata;j++){
-			a=i;
-			if(dt1[a]<dt1[j])
-				a=j;			
-			b=dt1[a];
-			dt1[a]=dt1[i];
-			dt1[i]=b;
+	int b;
+	for(int i=0;i<ndata;i++){
+		for(int j=0;j<ndata;j++){
+			if(dt1[j]>dt1[j+1])  {
+				b=dt1[j];
+				dt1[j]=dt1[j+1];
+				dt1[j+1]=b;
+			}
 		}
 	}
 }
