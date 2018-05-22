@@ -104,4 +104,5 @@ int main(){
 		cout<<" "<<dt1[i];
 	}
 	cout<<"\nSorting Selesai";
+	return 0;
 }
