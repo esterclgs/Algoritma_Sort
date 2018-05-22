@@ -1,72 +1,12 @@
-#include<iostream>
-#include<stdio.h>
+/*
+Implementasi Sorting Algoritma
+	Anggota Kelompok :
+		1. Ester Caroline Lumban Gaol NPM. 1717051002
+		2. Rhama Shandy NPM. 1717051018
+		3. Rayhan Syahrindra NPM. 1717051038
+		4. Renaldi Kumar Mahendra NPM. 1717051050
+	GitHub Link : https://github.com/esterclgs1002/Algoritma_Sort
+*/
+#include <iostream>
 using namespace std;
-
-//Untuk mengkompile salah satu algoritma sort, maka dua algoritma sort yang lain harus dijadikan sebagai komentar terlebih dahulu.
-
-//Algoritma Selection Sort
-void selection_sort(int[100], int);
-
-int main () {
-  int A[100], n,i;
-	
-	cout<<"Masukkan jumlah elemen = "; cin>>n;
-	cout<<"\n Masukkan "<<n<<" bilangan = \n";
-	for (i=1;i<=n;i++) {
-		cin>>A[i];
-}
-	
-	selection_sort(A,n);
-	cout<<"\nPengurutan dari nilai terkecil : \n";
-	for (i=1;i<=n;i++) {
-		cout<<A[i]<<"\n";
-	}
-	return 0;
-}
-
-void selection_sort(int A[100], int n) {
-	int i,j,imin,temp;
-
-	for (i=1; i<=n-1;i++) { 			//cari indeks dari elemen minimum di dalam A[i]
-	imin=i;
-	for (j=i+1;j<=n;j++){
-		if (A[j]<A[imin])
-		imin=j;					//pertukaran L[imin] dengan L[i]
-	
-	temp=A[imin];
-	A[imin]=A[i];
-	A[i]=temp;
-	}
-	}
-}
-
-//Algoritma Bubble Sort
-void bubble_sort(long [100], long);
-
-int main () {
-	long array[100], n, c, d, swap;
-	cout<<"Masukkan jumlah elemen = "; cin>>n;
-	cout<<"\nMasukkan "<<n<<" bilangan = \n";
-	for (c=0;c<n;c++) {
-		cin>>array[c];
-	}
-	bubble_sort(array,n);
-	cout<<"\nPengurutan dari nilai terkecil : \n";
-	for (c=0;c<n;c++) {
-	cout<<array[c]<<" ";
-	}
-	return 0;
-}
-
-void BubbleSort() {
-	int b;
-	for(int i=0;i<ndata;i++){
-		for(int j=0;j<ndata;j++){
-			if(dt1[j]>dt1[j+1])  {
-				b=dt1[j];
-				dt1[j]=dt1[j+1];
-				dt1[j+1]=b;
-			}
-		}
-	}
-}
+int dt1[100],dt2[100], ndata;
